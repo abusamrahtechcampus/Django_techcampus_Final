@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+	{% load static %}
+			{%  block breadcrumb %}
+
+			<li class="breadcrumb-item active">Boards</li>
+		     {% endblock %}
+
+		     {% block content %}  
+		<table class="table" style="border:solid 1PX #CCC">
+			<thead class="thead-inverse">
+				<tr>
+					<th><a href="#">Boars</a></th>
+					<th><a href="#">Post</a></th>
+					<th><a href="#">Topic</a></th>
+					<th>Last Post</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for board in boards %}
+				<tr>
+					<td>
+						<a href="{% url 'boards_topic' board.pk %}">{{board.name}}</a>
+					  <small class="text-muted d-block">{{board.description}}</small>
+					</td>
+					 <td class="align-middle">{{topic.Created_dt}}</td>
+					 <td class="align-middle">0</td>
+					 <td></td>
+					</td>
+				   </tr>
+				{% endfor %}
+			</tbody>
+		</table>
+        {% endblock %}
+
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://www.kanzalebda3.com"> محمد الاسمري</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+		
+

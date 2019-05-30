@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Sign In {% endblock %}
+<body>
+
+	{% block body %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+	<div class="container">
+		<a class="navbar-brand" href="{% url 'index' %}">Django Boards</a>
+		<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{user.username}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+     <form method="post" novalidate style="width: 600px; margin-left: 200px; margin-top: 10px; border: 1px solid; padding: 15px;" >
+     	<h1> Sign Up</h1>
+     	 {% csrf_token %}
+      {% include 'includes/form.html' %}
+
+     <button type="submit" class="btn btn-success" style="width: 550px;"> Submit</button>
+
+     </form>
+     </body>
+    
+         {% endblock %}
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+**
+
